@@ -16,6 +16,8 @@ sudo apt-get install -y build-essential curl wget git bash-completion
 # 如果需要支持音频处理及声音接口（即使我们用UDP），建议安装系统基础音频库
 sudo apt-get install -y libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg
 
+sudo apt install -y build-essential portaudio19-dev python3-dev ffmpeg sox libsox-dev
+
 # ================================
 # 2. 设置 Conda 环境
 # ================================
@@ -52,7 +54,7 @@ echo "[3/5] 安装深度学习及语音核心包..."
 pip install torch torchvision torchaudio
 
 # 指向项目根目录下的 requirements
-pip install -r rva_reqs.txt
+pip install -r rva_reqs.txt --extra-index-url https://download.pytorch.org/whl/cu126
 
 # ================================
 # 4. 安装 Unitree SDK2 Python 版
