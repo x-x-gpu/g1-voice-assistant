@@ -52,7 +52,7 @@ echo "[3/5] 安装深度学习及语音核心包..."
 pip install torch torchvision torchaudio
 
 # 指向项目根目录下的 requirements
-pip install -r ../rva_reqs.txt
+pip install -r rva_reqs.txt
 
 # ================================
 # 4. 安装 Unitree SDK2 Python 版
